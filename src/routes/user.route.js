@@ -1,20 +1,19 @@
 const express = require('express')
-const userService = require('../services/user.service')
+const { userController } = require('../controlers')
 const router = express.Router()
 
 router
   .route('/')
-  .get(userService.getUsers)
-  .post(userService.addUser)
-  .put(userService.updateUserName)
-  .delete(userService.deleteUser)
+  .post(userController.createUser)
 
 router
   .route('/:userId')
-  .get(userService.getUser)
+  .get(userController.getUser)
+  .put(userController.updateUser)
+  .delete(userController.deleteUser)
 
 router
   .route('/:userId/trs')
-  .get(userService.getUserContent)
+  .get(userController.getUserTranslateContent)
 
 module.exports = router
