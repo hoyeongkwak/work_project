@@ -1,4 +1,3 @@
-module.exports.echoService = require('./echo.service')
-module.exports.originContentService = require('./originContent.service')
-module.exports.translateService = require('./translateContent.service')
+module.exports.originalContentService = require('./originalContent.service')
+module.exports.translationService = require('./translationContent.service')
 module.exports.userService = require('./user.service')

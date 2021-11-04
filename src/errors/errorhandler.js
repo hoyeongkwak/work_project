@@ -16,16 +16,32 @@ const error404 = {
   '0000': '잘못된 주소를 입력하였습니다.',
   '0001': 'userId가 존재하지 않습니다.',
   '0002': 'userName이 존재하지 않습니다.',
-  '0003': 'originId이 존재하지 않습니다.',
-  '0004': 'originName이 존재하지 않습니다.',
-  '0005': 'transId가 존재하지 않습니다.',
-  '0006': 'transContent이 존재하지 않습니다.',
-  '0007': 'langId가 존재하지 않습니다.'
+  '0003': 'user의 translationContent가 존재하지 않습니다.',
+  '0004': 'userId의 형태가 잘못되었습니다.',
+  '0005': 'userName의 형태가 잘못되었습니다.',
+  '0006': 'userName의 길이를 초과하였습니다.',
+  '0011': 'originalContent가 존재하지 않습니다.',
+  '0012': 'originalId가 존재하지 않습니다.',
+  '0013': 'originalContent가 이미 존재 합니다.',
+  '0014': 'originalId의 형태가 잘못되었습니다.',
+  '0015': 'originalContent의 형태가 잘못되었습니다.',
+  '0016': 'originalContent의 길이를 초과하였습니다.',
+  '0020': 'translationContent가 추가되지 않았습니다.',
+  '0021': 'translationContent가 존재하지 않습니다.',
+  '0022': 'translationContent가 이미 존재합니다.',
+  '0023': 'translation Update가 실패하였습니다.',
+  '0024': 'translationId의 형태가 잘못되었습니다.',
+  '0025': 'translationContent의 형태가 잘못되었습니다.',
+  '0026': 'translationContent의 길이를 초과하였습니다.',
+  '0030': 'langId가 존재하지 않습니다.'
 }
 
 const error500 = {
   '0001': 'DB서버가 연결되지 않습니다.',
-  '0002': 'DB Error'
+  '0100': 'DB Error',
+  '0101': 'Insert가 실패하였습니다.',
+  '0102': 'Update가 실패하였습니다.',
+  '0103': 'Delete가 실패하였습니다.'
 }
 
 const errorDB = {

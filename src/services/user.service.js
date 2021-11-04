@@ -1,35 +1,27 @@
-const checkValue = require('./checkValue')
 const db = require('../models/database')
 
-const createUser = async (userBody) => {
+const createUser = async (options) => {
   // BodyType
-  const userName = userBody.userName
-  await checkValue.checkUserName({ userName })
-  const user = await db.createUser({ userName })
-  return user.rows[0].user_id
+  return await db.createUser(options)
 }
-/*
-const getUserIdByName = async (userBody) => {
-  const userName = parseInt(userBody.userName)
-  await checkValue.checkUserName({ userName })
-  const user = await db.findUserByName({ userName })
-  return user.rows[0]
-}
-*/
+// const getUserIdByName = async (options) => {
+//   const userName = parseInt(userBody.userName)
+//   await checkValue.checkUserName({ userName })
+//   const user = await db.findUserByName(options)
+//   return user.rows[0]
+// }
+
 const getUserById = async (options) => {
-  const user = await db.findUserById({ userId: options.userId })
-  return user
+  return await db.findUserById({ userId: options.userId })
 }
 const getUserTranslateById = async (options) => {
-  const user = await db.findUserTranslateContentById(options)
-  return user
+  return await db.findUserTranslateContentById(options)
 }
 const updateUser = async (options) => {
-  const user = await db.updateUser(options)
-  return user
+  return await db.updateUser(options)
 }
 const deleteUser = async (options) => {
-  await db.deleteUser({ options })
+  await db.deleteUser(options)
 }
 
 /*

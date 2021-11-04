@@ -1,9 +1,9 @@
 const express = require('express')
-const echoService = require('../services/echo.service')
+const { echoController } = require('../controlers')
 const router = express.Router()
 
 router
   .route('/')
-  .all(echoService.echo)
+  .all(echoController.echo)
 
 module.exports = router
